@@ -70,7 +70,6 @@
       font-weight: 600;
       color: #888;
       letter-spacing: 0.5px;
-      text-transform: uppercase;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid #e8e8e4;
@@ -145,29 +144,30 @@
       color: #1D9E75;
     }
 
-    .empty-state {
+    .loading {
       text-align: center;
       padding: 4rem 0;
       color: #aaa;
       font-size: 14px;
     }
 
-    /* 새 파일 추가 안내 카드 */
-    .add-hint {
-      background: #f9f9f7;
-      border: 1px dashed #d0d0ca;
-      border-radius: 12px;
-      padding: 1.25rem;
-      text-align: center;
-      color: #bbb;
-      font-size: 13px;
-      margin-top: 4px;
+    .loading-dot {
+      display: inline-block;
+      animation: blink 1.2s infinite;
+    }
+    .loading-dot:nth-child(2) { animation-delay: 0.2s; }
+    .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0.2; }
+      40% { opacity: 1; }
     }
 
-    .add-hint span {
-      display: block;
-      font-size: 20px;
-      margin-bottom: 6px;
+    .error-msg {
+      text-align: center;
+      padding: 3rem 0;
+      color: #ccc;
+      font-size: 13px;
     }
 
     footer {
@@ -195,59 +195,101 @@
 
 <main class="main">
   <div class="container">
-
-    <!-- ✅ 2026년 섹션 -->
-    <div class="year-section">
-      <div class="year-label">2026</div>
-
-      <!-- 4월 -->
-      <div class="month-section">
-        <div class="month-label">4월</div>
-        <div class="card-grid">
-
-          <!-- 4주차 -->
-          <a class="card" href="2026-04-w4.html">
-            <div class="card-week">4주차</div>
-            <div class="card-title">2026년 4월 4주차<br>조직문화 트렌드</div>
-            <div class="card-meta">2026.04</div>
-            <div class="card-arrow">→</div>
-          </a>
-
-          <!-- 5주차 -->
-          <a class="card" href="2026-04-w5.html">
-            <div class="card-week">5주차</div>
-            <div class="card-title">2026년 4월 5주차<br>조직문화 트렌드</div>
-            <div class="card-meta">2026.04</div>
-            <div class="card-arrow">→</div>
-          </a>
-
-        </div>
+    <div id="content">
+      <div class="loading">
+        <span class="loading-dot">●</span>
+        <span class="loading-dot">●</span>
+        <span class="loading-dot">●</span>
+        <p style="margin-top:12px;">뉴스레터 목록 불러오는 중...</p>
       </div>
-
-      <!-- 5월 (파일 추가 시 아래 주석 해제 후 사용) -->
-      <!--
-      <div class="month-section">
-        <div class="month-label">5월</div>
-        <div class="card-grid">
-          <a class="card" href="2026-05-w1.html">
-            <div class="card-week">1주차</div>
-            <div class="card-title">2026년 5월 1주차<br>조직문화 트렌드</div>
-            <div class="card-meta">2026.05</div>
-            <div class="card-arrow">→</div>
-          </a>
-        </div>
-      </div>
-      -->
-
     </div>
-    <!-- // 2026년 섹션 끝 -->
-
   </div>
 </main>
 
 <footer>
   조직문화팀 | 헥토이노베이션
 </footer>
+
+<script>
+  // ────────────────────────────────────────
+  // 설정값 (변경 불필요)
+  const GITHUB_USER = 'blac1795-design';
+  const GITHUB_REPO = 'culture-report';
+  const API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/`;
+  // ────────────────────────────────────────
+
+  const MONTH_KR = ['', '1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+
+  // 파일명 파싱: 2026-04-w4.html → { year, month, week }
+  function parseFilename(name) {
+    const m = name.match(/^(\d{4})-(\d{2})-w(\d+)\.html$/);
+    if (!m) return null;
+    return { year: m[1], month: parseInt(m[2]), week: parseInt(m[3]), name };
+  }
+
+  function renderCards(files) {
+    if (!files.length) {
+      return '<div class="error-msg">아직 업로드된 뉴스레터가 없어요.</div>';
+    }
+
+    // 연도별 그룹화
+    const byYear = {};
+    files.forEach(f => {
+      if (!byYear[f.year]) byYear[f.year] = {};
+      if (!byYear[f.year][f.month]) byYear[f.year][f.month] = [];
+      byYear[f.year][f.month].push(f);
+    });
+
+    let html = '';
+    // 최신 연도 먼저
+    Object.keys(byYear).sort((a, b) => b - a).forEach(year => {
+      html += `<div class="year-section"><div class="year-label">${year}</div>`;
+
+      // 최신 월 먼저
+      Object.keys(byYear[year]).sort((a, b) => b - a).forEach(month => {
+        html += `<div class="month-section">
+          <div class="month-label">${MONTH_KR[month]}</div>
+          <div class="card-grid">`;
+
+        // 최신 주차 먼저
+        byYear[year][month].sort((a, b) => b.week - a.week).forEach(f => {
+          html += `
+            <a class="card" href="${f.name}">
+              <div class="card-week">${f.week}주차</div>
+              <div class="card-title">${year}년 ${MONTH_KR[month]} ${f.week}주차<br>조직문화 트렌드</div>
+              <div class="card-meta">${year}.${String(month).padStart(2,'0')}</div>
+              <div class="card-arrow">→</div>
+            </a>`;
+        });
+
+        html += `</div></div>`;
+      });
+
+      html += `</div>`;
+    });
+
+    return html;
+  }
+
+  async function loadFiles() {
+    try {
+      const res = await fetch(API_URL);
+      if (!res.ok) throw new Error('API 오류');
+      const data = await res.json();
+
+      const files = data
+        .map(f => parseFilename(f.name))
+        .filter(Boolean);
+
+      document.getElementById('content').innerHTML = renderCards(files);
+    } catch (e) {
+      document.getElementById('content').innerHTML =
+        '<div class="error-msg">목록을 불러오지 못했어요.<br>잠시 후 새로고침 해주세요.</div>';
+    }
+  }
+
+  loadFiles();
+</script>
 
 </body>
 </html>

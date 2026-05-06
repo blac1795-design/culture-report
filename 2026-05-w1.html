@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>조직문화 위클리 브리핑 2026-05-06</title>
+<style>
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 24px 20px;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    padding: 36px 32px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(15,52,96,0.3);
+  }
+  .header h1 { font-size: 1.75em; margin: 0 0 10px; letter-spacing: -0.5px; }
+  .header p { opacity: 0.65; margin: 0; font-size: 0.88em; }
+  .header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.78em;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+  .cards { display: flex; flex-direction: column; gap: 18px; }
+  .card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 28px 22px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    border-left: 5px solid;
+    transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); }
+  .card:nth-child(1) { border-color: #6C63FF; }
+  .card:nth-child(2) { border-color: #FF5A78; }
+  .card:nth-child(3) { border-color: #2ECC71; }
+  .card:nth-child(4) { border-color: #FF9500; }
+  .card:nth-child(5) { border-color: #00BFFF; }
+
+  .card-num {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  .card:nth-child(1) .card-num { background: #ede9ff; color: #6C63FF; }
+  .card:nth-child(2) .card-num { background: #fff0f3; color: #FF5A78; }
+  .card:nth-child(3) .card-num { background: #e8f5e9; color: #2ECC71; }
+  .card:nth-child(4) .card-num { background: #fff3e0; color: #FF9500; }
+  .card:nth-child(5) .card-num { background: #e1f5fe; color: #00BFFF; }
+
+  .card-icon { float: right; font-size: 2em; margin-top: -4px; }
+  .card h2 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #1a1a2e;
+    line-height: 1.4;
+    clear: both;
+  }
+  .card p {
+    font-size: 0.91em;
+    color: #444;
+    line-height: 1.78;
+    margin: 0 0 14px;
+  }
+  .stat {
+    font-size: 0.85em;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .card:nth-child(1) .stat { background: #f5f3ff; color: #6C63FF; }
+  .card:nth-child(2) .stat { background: #fff5f7; color: #FF5A78; }
+  .card:nth-child(3) .stat { background: #f1f8f1; color: #2ECC71; }
+  .card:nth-child(4) .stat { background: #fff8f0; color: #FF9500; }
+  .card:nth-child(5) .stat { background: #f0f8ff; color: #00BFFF; }
+
+  .insight {
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.86em;
+    color: #555;
+    line-height: 1.65;
+    background: #f8f9ff;
+  }
+  .insight b { margin-right: 4px; }
+  .card:nth-child(1) .insight b { color: #6C63FF; }
+  .card:nth-child(2) .insight b { color: #FF5A78; }
+  .card:nth-child(3) .insight b { color: #2ECC71; }
+  .card:nth-child(4) .insight b { color: #FF9500; }
+  .card:nth-child(5) .insight b { color: #00BFFF; }
+
+  .source {
+    font-size: 0.75em;
+    color: #aaa;
+    margin-top: 10px;
+    display: block;
+  }
+  .source a { color: #aaa; }
+  .footer {
+    text-align: center;
+    margin-top: 28px;
+    padding: 18px;
+    font-size: 0.78em;
+    color: #999;
+    border-top: 1px solid #e0e0e0;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="badge">WEEKLY BRIEFING</div>
+    <h1>🗓 조직문화 위클리 브리핑</h1>
+    <p>2026년 5월 6일 | 헥토이노베이션 조직문화팀</p>
+  </div>
+
+  <div class="cards">
+
+    <!-- TREND 01 -->
+    <div class="card">
+      <div class="card-num">TREND 01</div>
+      <div class="card-icon">🤖</div>
+      <h2>AI 도입 가속화, 그러나 인간적 연결은 더 중요해진다</h2>
+      <p>
+        국내 매출 상위 500대 기업 중 86.7%가 이미 HR 업무에 AI를 활용하고 있습니다.
+        하지만 글로벌 직원의 63%는 AI 확산이 자신의 직장 경험을 '비개인화'할 것이라고 우려합니다.
+        AI가 반복 업무를 대체할수록, 팀 내 인간적 교류와 매니저의 진정성 있는 소통이 몰입도와 소속감의 핵심 변수로 부상합니다.
+      </p>
+      <span class="stat">📊 국내 HR AI 활용률 86.7% | 직원 63%가 AI의 비개인화 우려 (O.C. Tanner, 2026)</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b>
+        AI 도구 도입 시 효율성 홍보보다 '사람 중심 활용'을 먼저 강조하세요.
+        업무 자동화 이후 절약된 시간을 팀원 간 대화·피드백에 재투자하는 문화 설계가 필요합니다.
+      </div>
+      <span class="source">출처: <a href="https://wefuncorp.com/blog/hr-2026hrtrend" target="_blank">위펀 HR 인사이트</a> | <a href="https://www.octanner.com/articles/5-culture-trends-2026" target="_blank">O.C. Tanner 2026 Culture Report</a></span>
+    </div>
+
+    <!-- TREND 02 -->
+    <div class="card">
+      <div class="card-num">TREND 02</div>
+      <div class="card-icon">📉</div>
+      <h2>직원 몰입도 급락 — '문화 침체(Culture Atrophy)' 경보</h2>
+      <p>
+        2026년 글로벌 직원 몰입도가 64%로, 전년(88%) 대비 큰 폭으로 하락했습니다.
+        빠른 조직 변화 속도에 적응하지 못한 구성원들이 소진되면서 '문화 침체' 상태에 빠지는 기업이 늘고 있습니다.
+        전문성 개발 기회 제공(71%)이 몰입도 1위 동인이며, 진정성 있는 리더십과 정기 체크인이 핵심 처방으로 꼽힙니다.
+      </p>
+      <span class="stat">📊 글로벌 몰입도 64% (전년 88% → 24%p 급락) | 전문성 개발이 몰입도 1위 동인 71%</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b>
+        월 1회 팀 리더의 '공개 피드백 세션'을 제도화하고,
+        구성원 개인별 성장 목표를 분기 OKR에 연결하는 구조를 만들어 보세요.
+        변화 속도보다 '흡수 속도'를 먼저 점검해야 합니다.
+      </div>
+      <span class="source">출처: <a href="https://emtrain.com/blog/workplace-culture/four-trends-revealed-in-2026-culture-report/" target="_blank">emtrain 2026 Culture Report</a> | <a href="https://www.inspiring-workplaces.com/content/top-workplace-culture-trends-shaping-2026/" target="_blank">Inspiring Workplaces</a></span>
+    </div>
+
+    <!-- TREND 03 -->
+    <div class="card">
+      <div class="card-num">TREND 03</div>
+      <div class="card-icon">🎯</div>
+      <h2>개인화된 직원 경험(EX) 설계 — '감성 연봉'의 시대</h2>
+      <p>
+        2026년은 보편적 복리후생을 넘어, 구성원 개개인의 라이프스타일에 맞춘 맞춤형 경험 설계가 핵심 HR 전략으로 자리 잡는 해입니다.
+        채용 예산이 타이트해지면서 기업들은 '감성 연봉(Emotional Salary)'—유연근무, 자율성, 웰빙 지원—으로 인재를 유지하는 전략을 강화하고 있습니다.
+        데이터 기반 실시간 피드백 수집과 개인화 복지 포인트 제도가 확산 중입니다.
+      </p>
+      <span class="stat">📊 유연근무가 몰입도 동인 2위 63% | 저예산 조직문화 개선 전략 수요 급증 (Paywatch, 2026)</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b>
+        전사 동일 복지보다 '선택형 복지 포인트' 도입을 검토하고,
+        저비용으로 효과가 큰 유연근무·자율 휴가·팀 자치 권한 확대를 우선 실험해 보세요.
+      </div>
+      <span class="source">출처: <a href="https://www.paywatch.co.kr/post/2026-%ED%8A%B8%EB%A0%8C%EB%93%9C-%EC%A0%80%EB%B9%84%EC%9A%A9%EC%9C%BC%EB%A1%9C-mz%EC%84%B8%EB%8C%80-%EB%A7%8C%EC%A1%B1%EB%8F%84%EB%A5%BC-%EB%86%92%EC%9D%B4%EB%8A%94-2026%EB%85%84-%EC%A1%B0%EC%A7%81-%EB%AC%B8%ED%99%94-%ED%82%A4%EC%9B%8C%EB%93%9C-3%EA%B0%80%EC%A7%80" target="_blank">Paywatch 2026 HR 트렌드</a> | <a href="https://www.speak.com/ko/b2b-blog/2026-hr-strategy" target="_blank">Speak HR Strategy</a></span>
+    </div>
+
+    <!-- TREND 04 -->
+    <div class="card">
+      <div class="card-num">TREND 04</div>
+      <div class="card-icon">🧠</div>
+      <h2>번아웃 위기와 심리적 안전감 회복이 급선무</h2>
+      <p>
+        국내 청년 10명 중 3명이 번아웃을 경험하고 있으며, 이는 퇴사율 상승과 생산성 저하로 직결됩니다.
+        반면 EAP(직원지원프로그램)를 체계적으로 운영한 기업은 구성원의 심리적 위험도를 31.4% 개선한 사례가 보고되었습니다.
+        심리적 안전감이 높은 조직일수록 창의적 문제 해결과 자발적 발언이 활성화되어 성과에도 직접적인 영향을 미칩니다.
+      </p>
+      <span class="stat">📊 청년 번아웃 경험률 30% | EAP 운영 시 심리적 위험도 31.4% 개선 (이지경제, 2026)</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b>
+        분기 1회 익명 심리 안전감 설문과 EAP 연결 창구를 팀 내에 안내하세요.
+        관리자 교육에 '취약성을 드러내는 리더십' 모듈을 추가하면 팀 내 발언 문화가 빠르게 개선됩니다.
+      </div>
+      <span class="source">출처: <a href="https://www.ezyeconomy.com/news/articleView.html?idxno=218511" target="_blank">이지경제 EAP 개선 사례</a> | <a href="https://blog.clap.company/psychological_safety01/" target="_blank">CLAP 심리적 안전감 가이드</a></span>
+    </div>
+
+    <!-- TREND 05 -->
+    <div class="card">
+      <div class="card-num">TREND 05</div>
+      <div class="card-icon">🔄</div>
+      <h2>리스킬링·세대통합 채용 — '팀핏'이 새로운 기준</h2>
+      <p>
+        2026년 HRD 담당자들이 선정한 1위 트렌드는 리스킬링·업스킬링으로, AI 전환 시대에 기존 구성원의 역량 재설계가 채용보다 더 중요해졌습니다.
+        동시에 채용 방식도 '컬처핏'에서 '팀핏'으로 전환 중입니다. MZ세대와 기성세대가 공존하는 멀티제너레이션 조직에서는 세대별 소통 방식을 이해하고 통합하는 문화 설계가 핵심입니다.
+      </p>
+      <span class="stat">📊 리스킬링·업스킬링이 HRD 트렌드 1위 | 팀핏 채용 전환 기업 급증 (KMA 2026 HR 리포트, 원티드)</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b>
+        신규 채용 시 직무 능력 외에 '팀 협업 스타일'을 별도로 평가하는 구조화 면접을 도입하고,
+        분기별 사내 리스킬링 워크숍을 소규모 팀 단위로 운영해 학습 문화를 내재화하세요.
+      </div>
+      <span class="source">출처: <a href="https://www.kma.or.kr/kr/usrs/eduRegMgnt/eduRegMgntForm.do?p_brd_seq=746" target="_blank">KMA 2026 HR·HRD 트렌드 리포트</a> | <a href="https://blog.wantedlab.com/hr/report/hr-trend-report-2026" target="_blank">원티드 채용 트렌드 2026</a></span>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    헥토이노베이션 조직문화팀 최준호 팀장 | 매주 자동 발행<br>
+    문의: blac1795@gmail.com
+  </div>
+</div>
+</body>
+</html>

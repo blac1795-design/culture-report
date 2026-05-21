@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>조직문화 위클리 브리핑 | 2026.05.11</title>
+<style>
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 24px 20px;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  .header {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    padding: 36px 32px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(15,52,96,0.3);
+  }
+  .header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 0.72em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+  }
+  .header h1 { font-size: 1.75em; margin: 0 0 10px; font-weight: 800; }
+  .header p { opacity: 0.65; margin: 0; font-size: 0.88em; }
+  .header .keywords {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .header .kw {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78em;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .cards { display: flex; flex-direction: column; gap: 18px; }
+
+  .card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 28px 22px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    border-left: 5px solid;
+    transition: transform 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
+
+  .card:nth-child(1) { border-color: #6C63FF; }
+  .card:nth-child(2) { border-color: #FF5A78; }
+  .card:nth-child(3) { border-color: #2ECC71; }
+  .card:nth-child(4) { border-color: #FF9500; }
+  .card:nth-child(5) { border-color: #00BFFF; }
+
+  .card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .card-num {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 6px;
+  }
+  .card:nth-child(1) .card-num { background: #ede9ff; color: #6C63FF; }
+  .card:nth-child(2) .card-num { background: #fff0f3; color: #FF5A78; }
+  .card:nth-child(3) .card-num { background: #e8f5e9; color: #2ECC71; }
+  .card:nth-child(4) .card-num { background: #fff3e0; color: #FF9500; }
+  .card:nth-child(5) .card-num { background: #e1f5fe; color: #00BFFF; }
+
+  .card-icon { font-size: 1.4em; }
+
+  .card h2 { font-size: 1.08em; font-weight: 700; margin: 0 0 12px; color: #1a1a2e; }
+  .card p { font-size: 0.91em; color: #444; line-height: 1.78; margin: 0 0 14px; }
+
+  .stat {
+    font-size: 0.85em;
+    font-weight: 700;
+    padding: 9px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .card:nth-child(1) .stat { background: #f5f3ff; color: #6C63FF; }
+  .card:nth-child(2) .stat { background: #fff5f7; color: #FF5A78; }
+  .card:nth-child(3) .stat { background: #f1f8f1; color: #2ECC71; }
+  .card:nth-child(4) .stat { background: #fff8f0; color: #FF9500; }
+  .card:nth-child(5) .stat { background: #f0f8ff; color: #00BFFF; }
+
+  .insight {
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.86em;
+    color: #555;
+    line-height: 1.65;
+    background: #f8f9ff;
+  }
+  .insight b { margin-right: 4px; }
+  .card:nth-child(1) .insight b { color: #6C63FF; }
+  .card:nth-child(2) .insight b { color: #FF5A78; }
+  .card:nth-child(3) .insight b { color: #2ECC71; }
+  .card:nth-child(4) .insight b { color: #FF9500; }
+  .card:nth-child(5) .insight b { color: #00BFFF; }
+
+  .source { font-size: 0.75em; color: #aaa; margin-top: 10px; display: block; }
+
+  .footer {
+    text-align: center;
+    margin-top: 28px;
+    padding: 18px;
+    font-size: 0.78em;
+    color: #999;
+    border-top: 1px solid #e0e0e0;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="badge">Weekly Briefing</div>
+    <h1>🗓 조직문화 위클리 브리핑</h1>
+    <p>2026년 5월 11일 | 헥토이노베이션 조직문화팀</p>
+    <div class="keywords">
+      <span class="kw">#AI와인간균형</span>
+      <span class="kw">#직원몰입도</span>
+      <span class="kw">#리스킬링</span>
+      <span class="kw">#심리적안전감</span>
+      <span class="kw">#세대통합</span>
+    </div>
+  </div>
+
+  <div class="cards">
+
+    <!-- TREND 01 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">TREND 01</span>
+        <span class="card-icon">🤖</span>
+      </div>
+      <h2>AI와 인간 연결의 균형 — 기술보다 사람이 먼저</h2>
+      <p>AI가 채용·성과관리·온보딩 등 HR 전반에 확산되고 있지만, 직원 63%는 AI가 직장 경험을 비인격화할 것을 우려합니다. 인간적 연결을 유지하면서 AI를 도입하는 '균형 전략'이 2026년 조직문화의 핵심 과제로 부상하고 있습니다.</p>
+      <span class="stat">📊 직원 63%가 "AI가 직장 경험을 비인격화할 것"을 우려 (O.C. Tanner Global Culture Report 2026)</span>
+      <div class="insight"><b>💡 실무 인사이트:</b> AI 도구 도입 시 반드시 팀원 간 대면 소통 프로그램(타운홀, 팀 회식, 1on1)을 병행 강화하세요. 기술 도입 속도보다 구성원 수용성 관리가 더 중요합니다.</div>
+      <span class="source">출처: O.C. Tanner Global Culture Report 2026 | octanner.com</span>
+    </div>
+
+    <!-- TREND 02 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">TREND 02</span>
+        <span class="card-icon">📉</span>
+      </div>
+      <h2>직원 몰입도 급락 — 개인화된 EX 설계가 돌파구</h2>
+      <p>2026년 직원 몰입도는 64%로, 전년도(88%) 대비 24%p 급락했습니다. 보편적 복리후생보다 개인의 커리어·라이프스타일에 맞춘 개인화된 직원 경험(EX) 설계가 몰입도 회복의 핵심 해법으로 주목받고 있습니다.</p>
+      <span class="stat">📊 직원 몰입도 64% (2025년 88% → 2026년 24%p 하락) | 몰입 동인 1위: 전문성 개발(71%)</span>
+      <div class="insight"><b>💡 실무 인사이트:</b> 팀원 개인별 성장 목표를 설정하고, 분기 1회 커리어 대화를 제도화하세요. '내가 여기서 성장할 수 있다'는 확신이 몰입도의 핵심입니다.</div>
+      <span class="source">출처: Inspiring Workplaces / HR Dive 2026 | inspiring-workplaces.com, hrdive.com</span>
+    </div>
+
+    <!-- TREND 03 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">TREND 03</span>
+        <span class="card-icon">🎓</span>
+      </div>
+      <h2>리스킬링·업스킬링 — AI 시대 필수 인재 전략</h2>
+      <p>HR 교육 담당자의 50%가 리스킬링·업스킬링을 2026년 최우선 HRD 과제로 선정했습니다. AI·자동화로 직무가 급변하는 환경에서 구성원의 역량을 선제적으로 재정비하는 것이 조직 생존력의 핵심입니다.</p>
+      <span class="stat">📊 HRD 전문가 50%가 리스킬링을 1순위 과제로 선정 (KPC 2026 HRD Trend Report)</span>
+      <div class="insight"><b>💡 실무 인사이트:</b> 전사 리스킬링 로드맵을 수립하고, 직무별 필수 역량을 정의한 뒤 내부 강사제와 외부 학습 플랫폼(e-러닝)을 병행 운영하세요. 작은 팀 학습 세션부터 시작해도 효과적입니다.</div>
+      <span class="source">출처: KPC 2026 HRD Trend Report | kpc.or.kr</span>
+    </div>
+
+    <!-- TREND 04 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">TREND 04</span>
+        <span class="card-icon">🧠</span>
+      </div>
+      <h2>번아웃 위기와 심리적 안전감 — 조직 신뢰의 위기</h2>
+      <p>한국 청년 직장인 10명 중 3명이 번아웃을 경험했으며, 전 세계적으로도 직원 49%만이 회사가 모두가 성장할 수 있는 안전한 문화를 만들 것이라고 신뢰합니다. 심리적 안전감 확보가 조직 몰입의 선결 조건으로 부상하고 있습니다.</p>
+      <span class="stat">📊 한국 청년 30%가 번아웃 경험 | 글로벌 직원 49%만 고용주 신뢰 (emtrain Culture Report 2026)</span>
+      <div class="insight"><b>💡 실무 인사이트:</b> 익명 피드백 채널과 정기 1on1 미팅을 제도화하고, 심리 상담 지원 제도(EAP)를 도입하세요. 리더가 먼저 자신의 어려움을 공유하는 '취약성의 리더십'이 심리적 안전감의 시작입니다.</div>
+      <span class="source">출처: emtrain 2026 Culture Report / KBS 보도(2025.12) | emtrain.com</span>
+    </div>
+
+    <!-- TREND 05 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">TREND 05</span>
+        <span class="card-icon">🌈</span>
+      </div>
+      <h2>세대통합과 이모셔널 샐러리 — 저비용 인재 유지 전략</h2>
+      <p>멀티제너레이션(MZ+X세대+베이비붐) 인력 관리가 2026년 주요 HR 과제(47%)로 떠올랐습니다. 채용 예산 긴축 속에서 유연근무·인정·정서적 보상('이모셔널 샐러리')이 인재 유치·유지의 핵심 수단으로 주목받고 있습니다.</p>
+      <span class="stat">📊 HR 리더 47%가 멀티제너레이션 인력 관리를 2026년 최우선 과제로 선정 (emtrain 2026)</span>
+      <div class="insight"><b>💡 실무 인사이트:</b> 세대별 선호 소통 방식과 동기 요인을 파악하고, 유연 복리후생 메뉴를 도입하세요. 소소한 공개 칭찬, 자율 재택 선택권 등 비금전적 인정 프로그램이 MZ세대 유지율을 높이는 데 효과적입니다.</div>
+      <span class="source">출처: emtrain 2026 Culture Report / Paywatch HR 트렌드 2026 | emtrain.com, paywatch.co.kr</span>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    헥토이노베이션 조직문화팀 | 매주 월요일 자동 발행<br>
+    담당: 최준호 팀장 | 문의: 조직문화팀 슬랙 채널
+  </div>
+
+</div>
+</body>
+</html>

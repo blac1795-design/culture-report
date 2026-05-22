@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>조직문화 위클리 브리핑 | 2026.05.22</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background: #f0f2f5;
+    padding: 24px 20px;
+    color: #1a1a2e;
+  }
+  .container { max-width: 720px; margin: 0 auto; }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 40px 36px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -30px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .header-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.8);
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+  .header h1 { font-size: 1.75em; font-weight: 800; margin-bottom: 10px; }
+  .header p { opacity: 0.6; font-size: 0.88em; line-height: 1.6; }
+
+  /* CARDS */
+  .cards { display: flex; flex-direction: column; gap: 20px; }
+  .card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 28px 24px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    border-left: 5px solid;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::after {
+    content: attr(data-icon);
+    position: absolute;
+    top: 16px; right: 20px;
+    font-size: 2.2em;
+    opacity: 0.12;
+  }
+  .card:nth-child(1) { border-color: #6C63FF; }
+  .card:nth-child(2) { border-color: #FF5A78; }
+  .card:nth-child(3) { border-color: #2ECC71; }
+  .card:nth-child(4) { border-color: #FF9500; }
+  .card:nth-child(5) { border-color: #00BFFF; }
+
+  .card-num {
+    display: inline-block;
+    font-size: 0.68em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .card:nth-child(1) .card-num { background: #ede9ff; color: #6C63FF; }
+  .card:nth-child(2) .card-num { background: #fff0f3; color: #FF5A78; }
+  .card:nth-child(3) .card-num { background: #e8f5e9; color: #2ECC71; }
+  .card:nth-child(4) .card-num { background: #fff3e0; color: #FF9500; }
+  .card:nth-child(5) .card-num { background: #e1f5fe; color: #00BFFF; }
+
+  .card h2 { font-size: 1.1em; font-weight: 800; margin-bottom: 12px; color: #1a1a2e; line-height: 1.45; }
+  .card p { font-size: 0.91em; color: #444; line-height: 1.82; margin-bottom: 16px; }
+
+  .stat {
+    display: block;
+    font-size: 0.86em;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .card:nth-child(1) .stat { background: #f5f3ff; color: #6C63FF; }
+  .card:nth-child(2) .stat { background: #fff5f7; color: #FF5A78; }
+  .card:nth-child(3) .stat { background: #f1f8f1; color: #2ECC71; }
+  .card:nth-child(4) .stat { background: #fff8f0; color: #FF9500; }
+  .card:nth-child(5) .stat { background: #f0f8ff; color: #00BFFF; }
+
+  .insight {
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 0.87em;
+    color: #444;
+    line-height: 1.72;
+    background: #f8f9ff;
+    border: 1px solid #eef0ff;
+  }
+  .insight b { margin-right: 6px; }
+  .card:nth-child(1) .insight { border-color: #ede9ff; }
+  .card:nth-child(1) .insight b { color: #6C63FF; }
+  .card:nth-child(2) .insight { border-color: #ffe4ea; }
+  .card:nth-child(2) .insight b { color: #FF5A78; }
+  .card:nth-child(3) .insight { border-color: #d4f0d4; }
+  .card:nth-child(3) .insight b { color: #2ECC71; }
+  .card:nth-child(4) .insight { border-color: #ffe8bf; }
+  .card:nth-child(4) .insight b { color: #FF9500; }
+  .card:nth-child(5) .insight { border-color: #bde8ff; }
+  .card:nth-child(5) .insight b { color: #00BFFF; }
+
+  .source {
+    font-size: 0.74em;
+    color: #b0b0b0;
+    margin-top: 12px;
+    display: block;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+  }
+  .source a { color: #b0b0b0; text-decoration: none; }
+  .source a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    margin-top: 32px;
+    padding: 20px;
+    font-size: 0.78em;
+    color: #aaa;
+    border-top: 1px solid #e0e0e0;
+    line-height: 1.8;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="header-badge">Weekly Briefing</div>
+    <h1>🗓 조직문화 위클리 브리핑</h1>
+    <p>2026년 05월 22일 (금) &nbsp;|&nbsp; 헥토이노베이션 조직문화팀<br>매주 자동 수집된 국내외 HR·조직문화 핵심 트렌드 5선</p>
+  </div>
+
+  <div class="cards">
+
+    <!-- TREND 01 -->
+    <div class="card" data-icon="📉">
+      <div class="card-num">TREND 01</div>
+      <h2>글로벌 직원 몰입도, 2020년 이후 최저 — 한국도 예외 없다</h2>
+      <p>
+        Gallup의 2026 글로벌 직장 현황 보고서에 따르면, 전 세계 직원 몰입도가 20%로
+        2020년 이후 최저 수준을 기록했습니다. 이로 인한 생산성 손실은 무려 연간
+        <strong>10조 달러</strong>에 달하는 것으로 추산됩니다. 몰입도 하락의 핵심 원인은
+        관리자 과부하, 변화 피로감, 소속감 부재로 나타났습니다.
+      </p>
+      <span class="stat">📊 글로벌 직원 몰입도 20% (2020년 이후 최저) · 손실 규모 연간 $10조</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b> 조직 내 몰입도 진단을 정기화하세요. 연 1회 설문에서
+        벗어나 분기별 펄스 서베이를 도입하면 이탈 신호를 조기에 포착할 수 있습니다.
+        특히 팀장급 관리자의 번아웃 여부를 우선 점검하세요.
+      </div>
+      <span class="source">출처: <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx" target="_blank">Gallup — State of the Global Workplace 2026</a></span>
+    </div>
+
+    <!-- TREND 02 -->
+    <div class="card" data-icon="🤖">
+      <div class="card-num">TREND 02</div>
+      <h2>AI가 관리자를 대체하는 게 아니라, 관리자를 '재정의'한다</h2>
+      <p>
+        2026년 HR 전략의 핵심은 AI를 단순 자동화 도구가 아닌 '관리자 역량 확장 수단'으로
+        활용하는 것입니다. AI 기반 대시보드로 팀원 컨디션·생산성 데이터를 실시간 조회하고,
+        반복 행정 업무를 자동화해 관리자가 코칭과 동기부여에 집중할 수 있는 환경을 만드는
+        기업이 성과에서 앞서나가고 있습니다.
+      </p>
+      <span class="stat">📊 AI 도입 실패의 주요 원인 — 직원이 "왜 써야 하는지" 납득하지 못함 (HR 조사)</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b> AI 도구를 팀에 도입할 때는 '사용법 교육'보다 '사용 이유 설계'가
+        먼저입니다. 업무에서 AI가 실제로 덜어주는 것이 무엇인지 구체적으로 보여주는 파일럿부터
+        시작하세요.
+      </div>
+      <span class="source">출처: <a href="https://wefuncorp.com/blog/hr-2026hrtrend" target="_blank">위펀 WEFUN — 2026 기업 HR 전략 트렌드</a> · <a href="https://www.calluscompany.com/blog/kr/2026-hr-trend" target="_blank">캘러스 — 2026 HR 트렌드</a></span>
+    </div>
+
+    <!-- TREND 03 -->
+    <div class="card" data-icon="📚">
+      <div class="card-num">TREND 03</div>
+      <h2>리스킬링·업스킬링, 선택이 아닌 조직 생존 전략</h2>
+      <p>
+        한국생산성본부의 2026 HRD 트렌드 리포트에서 교육 담당자들이 꼽은 1순위 이슈는
+        '리스킬링·업스킬링'이었습니다. AI·자동화로 기존 직무가 빠르게 변화하는 상황에서,
+        구성원이 새로운 역할로 전환할 수 있도록 돕는 내부 학습 생태계 구축이
+        조직 경쟁력의 핵심으로 부상했습니다.
+      </p>
+      <span class="stat">📊 직원 몰입도 1위 동인 — '전문성 개발 기회' 71% · 원격/하이브리드 근무 63%</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b> 학습을 별도 이벤트가 아닌 일상 업무에 녹여야 합니다.
+        점심 학습 세션, 사내 멘토링 매칭, 직무 순환 제도 등 소규모·저비용으로 시작할 수 있는
+        학습 문화부터 설계하세요.
+      </div>
+      <span class="source">출처: <a href="https://www.kpc.or.kr/download/pt/KPC2026HRDTrendReport.pdf" target="_blank">한국생산성본부 — 2026 HRD Trend Report</a></span>
+    </div>
+
+    <!-- TREND 04 -->
+    <div class="card" data-icon="🛡">
+      <div class="card-num">TREND 04</div>
+      <h2>심리적 안전감 × 세대통합 — 다세대 조직의 필수 토대</h2>
+      <p>
+        Z세대부터 5060 시니어 세대까지 4~5세대가 공존하는 직장에서 세대 갈등은
+        생산성과 이직률에 직접적인 영향을 미칩니다. 심리적 안전감이 높은 조직의
+        구성원은 변화 상황에서 지지받는다고 느낄 가능성이 <strong>2.4배</strong> 높으며,
+        세대를 아우르는 통합형 소통 구조가 경쟁력의 핵심 변수로 부상했습니다.
+      </p>
+      <span class="stat">📊 소속감 강한 직원 — 변화 상황에서 지지받는다고 느끼는 확률 2.4배 높음</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b> 세대 통합 워크숍·리버스 멘토링을 분기 1회 운영해 보세요.
+        "의견을 내도 괜찮다"는 분위기를 만드는 것은 제도보다 팀장의 일상적 언어와 반응에서
+        시작됩니다.
+      </div>
+      <span class="source">출처: <a href="https://psytimes.co.kr/news/view.php?idx=11261&mcode=m2068pp9" target="_blank">사이타임즈 — 세대 충돌, 조직을 진화시키는 불편한 동거</a> · <a href="https://www.octanner.com/articles/5-culture-trends-2026" target="_blank">O.C. Tanner — 5 Culture Trends 2026</a></span>
+    </div>
+
+    <!-- TREND 05 -->
+    <div class="card" data-icon="✨">
+      <div class="card-num">TREND 05</div>
+      <h2>개인화된 직원 경험(EX) 설계 — '맞춤형 복리후생'이 핵심</h2>
+      <p>
+        2026년 직원 경험 트렌드의 핵심은 '개인화'입니다. 동일한 복리후생을
+        모든 직원에게 제공하는 방식은 더 이상 효과적이지 않으며,
+        근무 방식(하이브리드·원격), 경력 개발 경로, 멘탈 헬스 지원,
+        생애주기별 유연 근무 옵션 등을 개인의 상황에 맞게 설계하는 것이
+        인재 유지의 핵심 전략으로 자리잡았습니다.
+      </p>
+      <span class="stat">📊 저비용 MZ 만족도 향상 키워드 — 자율성·성장·인정 (연봉 외 비금전 요소의 부상)</span>
+      <div class="insight">
+        <b>💡 실무 인사이트:</b> 복리후생 메뉴판 방식(카페테리아식 복지)이나
+        연간 자기계발비 자율 사용 제도를 검토해 보세요. 예산이 작더라도
+        구성원이 '선택권'을 갖는다는 경험 자체가 몰입도를 높입니다.
+      </div>
+      <span class="source">출처: <a href="https://www.paywatch.co.kr/post/2026-%ED%8A%B8%EB%A0%8C%EB%93%9C-%EC%A0%80%EB%B9%84%EC%9A%A9%EC%9C%BC%EB%A1%9C-mz%EC%84%B8%EB%8C%80-%EB%A7%8C%EC%A1%B1%EB%8F%84%EB%A5%BC-%EB%86%92%EC%9D%B4%EB%8A%94-2026%EB%85%84-%EC%A1%B0%EC%A7%81-%EB%AC%B8%ED%99%94-%ED%82%A4%EC%9B%8C%EB%93%9C-3%EA%B0%80%EC%A7%80" target="_blank">페이워치 — 2026 MZ세대 조직문화 키워드</a> · <a href="https://go.perceptyx.com/employee-experience-trends-web-report" target="_blank">Perceptyx — EX Trends 2026</a></span>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    헥토이노베이션 조직문화팀 · 최준호 팀장<br>
+    📅 2026년 05월 22일 자동 발행 | 매주 금요일 업데이트<br>
+    수집 출처: Gallup, KPC HRD Report, 위펀, 페이워치, O.C. Tanner, Perceptyx, 사이타임즈 외
+  </div>
+
+</div>
+</body>
+</html>
